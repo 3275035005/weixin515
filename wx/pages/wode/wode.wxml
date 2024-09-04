@@ -1,0 +1,85 @@
+<!--pages/me/me.wxml-->
+<view class='container'>
+      <view class='head'> 
+          <image src='{{userInfo.image}}'></image>
+          {{userInfo.name}}
+      </view>
+
+      <view class='box list1'>
+          <view class='title'>
+                 <text class='l'>代购</text>
+                 <text class='r'>我的跑腿代购</text>
+          </view>
+
+          <block wx:for="{{myShophelp}}" wx:key="">
+          <view class='one'>
+              <view class='user'>
+                 <image src='{{item.image}}'></image>
+                  <view class='info'>
+                     <view class='a'>
+                        <text>{{item.name}}</text>
+                     </view>
+                     <view class='b'>
+                        <view class='money'>跑腿费:￥{{item.price}}</view><text class='time'>{{item.created}}</text>
+                     </view>
+                  </view>
+              </view>
+               <view class='col'>
+                 <image src='/img/goods.png'></image>{{item.userName}}
+              </view>
+              <view class='col'>
+                 <image src='/img/addr.png'></image>{{item.address}}
+              </view>
+               <view class='sure' >
+                 <view>已经不需要帮助了^_^</view><text class='help1' data-index='{{index}}'>已处理</text>
+              </view>
+             
+          </view>
+      </block>
+      </view>
+
+       <view class='box '>
+          <view class='title'>
+                <text class='l'>招领</text>
+
+          </view>
+          <view class='lost'>
+            <block wx:for="{{myLostGoods}}" wx:key="">
+         <view class='one ' bind:longpress="dellostgood" data-index="{{index}}">
+            <image class='logo' src='{{item.image}}'  ></image>
+          <view class='base'>
+             <view class='things'>物品名称：{{item.name}}</view>
+          <view class='person'>
+           <image class='user' src='/img/person.png'></image>
+           <view class='name'>{{item.userId}}</view>
+         </view>
+       <view class='contact'>联系方式：{{item.phone}}</view>
+         <view class='address'>丢失地址：{{item.address}}</view>
+       </view>
+        </view><!--one end-->
+      
+    </block>
+    </view>
+     
+      </view>
+
+       <view class='box thing-box'>
+
+        <view class='title'>
+                <text class='l'>二手</text>
+               <text class='r'>我发布的二手商品</text>
+          </view>
+
+     <block wx:for="{{myGoodsList}}" wx:key="">
+         <view class='one' >
+          <image class='logo' src='{{item.image}}'></image>
+    
+           <view class='desc'>
+             {{item.details}}
+           </view>
+            <view class='goodsdeal' data-index="{{index}}">已处理</view>
+
+         </view><!--one end-->
+          </block>
+      </view>
+</view>

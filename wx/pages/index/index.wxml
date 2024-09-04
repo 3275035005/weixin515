@@ -1,0 +1,21 @@
+<image class='backimg' src="../../img/index.jpg" mode='scaleToFill'></image>
+<view class="container">
+   <view class='notice'> 
+    {{content}}
+   </view>
+
+   <view class='menu-box'>
+      <navigator  url="/pages/lose/lose" class='one a'>
+         失物招领
+      </navigator>
+      <navigator url="/pages/errand/errand" class='one b'>
+         跑腿代购
+      </navigator>
+      <navigator url="/pages/secondhand/secondhand"  class='one c'>
+        二手闲置
+      </navigator>
+      <navigator url="/pages/wode/wode"  class='one d'>
+        个人中心
+      </navigator>
+   </view>
+</view>

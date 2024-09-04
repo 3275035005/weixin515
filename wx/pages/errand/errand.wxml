@@ -1,0 +1,36 @@
+<!--pages/shophelper/shophelper.wxml-->
+<view class='container'>
+    <view class='list'>
+      <block wx:for="{{list}}" wx:key="">
+          <view class='one'>
+              <view class='user'>
+                
+                 <image src='{{item.image}}'></image>
+                  <view class='info'>
+                     <view class='a'>
+                        <text>{{item.name}}</text>
+                     </view>
+                     <view class='b'>
+                        <view class='money'>跑腿费:￥{{item.price}}</view><text class='time'>{{item.friendly_time}}</text>
+                     </view>
+                  </view>
+              </view>
+               <view class='col'>
+                 <image src='/img/goods.png'></image>{{item.userName}}
+              </view>
+              <view class='col'>
+                 <image src='/img/addr.png'></image>{{item.address}}
+              </view>
+              <view class='sure' wx:if="{{item.status==0}}">
+                 <view>快来帮帮我吧^_^</view><text bindtap='callphone' class='help' data-num='{{item.phone}}'>帮忙</text>
+              </view>
+               <view class='sure' wx:else>
+                 <view>已经不需要帮助了^_^</view><text class='help1'>已处理</text>
+              </view>
+             
+          </view>
+      </block>
+    </view>
+</view>
+
+   

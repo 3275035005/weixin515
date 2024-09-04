@@ -1,0 +1,51 @@
+<!--pages/foundthing/foundthing.wxml-->
+<view class = 'container'>
+<view class='top'>
+ <view class = 'mark'>
+如发现你丢失的物品，请联系我们！
+ </view>
+ <view class = 'find'>
+  <input placeholder='丢失物品名称'  bindinput='seekChange'></input>
+  <button bindtap='seekThings'>搜索</button>
+ </view>
+</view>
+
+ <view class='bound' style='height:220rpx;color:#f7f7f7'>...</view>
+
+  <view class='box'>
+    <view class='left'>
+     <block wx:for="{{list}}" wx:key="">
+    <view class='one'  wx:if="{{index%2 == 0}}">
+        <image class='logo' src='{{item.image}}'  ></image>
+        <view class='base'>
+            <view class='things'>物品名称：{{item.name}}</view>
+          <view class='person'>
+           <image class='user' src='/img/person.png'></image>
+           <view class='name'>{{item.userId}}</view>
+         </view>
+       <view class='contact'>联系方式：{{item.phone}}</view>
+         <view class='address'>认领地址：{{item.address}}</view>
+       </view>
+      </view><!--one end-->
+    </block>
+   </view>
+
+  <view class='right'>
+     <block wx:for="{{list}}" wx:key="">
+    <view class='one '  wx:if="{{index%2 != 0}}">
+           <image class='logo' src='{{item.image}}'  ></image>
+        <view class='base'>
+            <view class='things'>物品名称：{{item.name}}</view>
+          <view class='person'>
+           <image class='user' src='/img/person.png'></image>
+           <view class='name'>{{item.userId}}</view>
+         </view>
+       <view class='contact'>联系方式：{{item.phone}}</view>
+         <view class='address'>认领地址：{{item.address}}</view>
+       </view>
+      </view><!--one end-->
+    </block>
+   </view>
+   </view>
+ </view>
+

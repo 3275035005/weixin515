@@ -1,0 +1,23 @@
+<!-- logo -->
+<view class="login_logo flex center">
+  <view class="login_logo__image">校园跑腿</view>
+</view>
+<block>
+
+    <!-- form -->
+    <view class="login_form">
+        <view class="login_form__item">
+            <input type="number" placeholder="请输入账号"  bindinput="getUsername" class="login_form__input"/>
+        </view>
+        <view class="login_form__item">
+            <input type="text" placeholder="请输入密码" bindinput="getPassword" class="login_form__input" />
+        </view>
+        <view class="login_form__item">
+            <button bindtap="loginBtn" class="page_button flex center" style="padding:0; width: 630rpx;">
+                登录
+            </button>
+        </view>
+    </view>
+    <!-- form -->
+
+</block>

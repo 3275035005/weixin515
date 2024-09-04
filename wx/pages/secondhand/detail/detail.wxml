@@ -1,0 +1,21 @@
+<view class="container">
+ 
+  <image class='show' mode='widthFix' src='{{detail.image}}'></image>
+   <view style='color:white;height:20vh'>...</view>
+</view>
+<view class='bottom'>
+  <view class='desc'>
+     {{detail.details}}
+  </view>
+  <view class='base'>
+     <view class='user'>
+        {{detail.name}}
+     </view>
+     <view class='op'>
+        <view class='r' bindtap='call' data-num="{{detail.phone}}">电话</view>
+     </view>
+  </view>
+</view>
+<view>
+
+</view>
