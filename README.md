@@ -1,4 +1,4 @@
-# 基于SpringBoot+Vue协同过滤算法招聘兼职小程序
+# 基于Java+Springboot+Vue协同过滤算法招聘兼职小程序
 
 ## 获取地址
 
